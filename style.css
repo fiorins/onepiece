@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+:root {   /*dark mode variable*/
+  --app-container: #F3F6FD;
+  --main-color: #1F1C2E; /*colore dei testi */
+  --secondary-color: #4A4A4A;
+}
+
+.dark:root {   /*dark mode variable*/
+  --app-container: #1F1C2E;
+  --main-color: #F3F6FD;
+  --secondary-color: rgba(255,255,255,.8);
+}
+
+html, body {
+  /*width:100%*/
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  overflow: auto; /*con hidden vieta lo scroll*/
+}
+
+button, a {
+  cursor: pointer;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--app-container);
+  transition: 0.2s;
+}
+
+.maps-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5% 0 5%;
+}
+
+/* se voglio mettere in ordine piu mappe su una sezione */
+.second.section, .third.section {
+  padding: 2% 0 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+/*SEZIONI HEADER*/
+.app-header {
+  color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.8% 2%;
+  
+  /*position: sticky;
+  top: 0;
+  background: var(--app-container);*/
+}
+
+.app-header-left, .app-header-right{
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 20px;
+  /*line-height: 24px; */
+  font-weight: 700;
+  margin: 0 32px;
+}
+
+.app-buttons {
+  width: 100%;
+  padding: 0px 0px 0px 0px;
+  background-color: transparent;
+  margin-top: 0px;
+  display: flex;
+  justify-content: left;
+}
+
+.bottone {
+  text-decoration: none !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  font-size: 20px;
+  position: relative;
+  color: #1F1C2E;   /* colore icona */
+  border: 2px solid #1F1C2E;  /* colore bordo */
+}
+
+.bottone {  /* transizione iniziale del bordo del bottone */
+  transition: all 0.3s linear 0.3s;
+}
+.bottone * {  /* transizione iniziale dell'icona del bottone */
+  transition: all 0.3s linear 0s;
+}
+.bottone:hover {  /* transizione finale del bordo del bottone */
+  transition: all 0.3s linear 0s;
+  border-color: rgba(255, 0, 0, 0) !important; /* l'ultimo valore gestisce la trasparenza del bordo del bottone */ /*senza important! ho notato che non funziona dopo che si passa alla dark mode*/
+}
+.bottone:hover * {  /* transizione finale dell'icona del bottone */
+  transition: all 0.3s linear 0.3s;
+  transform: scale(1.15);
+}
+
+#gif-hide {
+  visibility: hidden;
+}
+
+.mode-switch {  /*button della dark mode */
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  /*line-height: 24px;*/
+  font-weight: 700;
+  margin: 0 32px;
+}
+
+
+/*SEZIONI FOOTER*/
+.app-footer {
+  color: var(--main-color);
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3% 2% 2% 2%;
+  position: relative; /*provare fixed anche*/
+  bottom: 0;
+  height: 2em;
+  left: 0;
+  
+  /*position: sticky;
+  top: 0;
+  background: var(--app-container); */
+}
+.app-footer-left, .app-footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.app-rights {
+  font-size: 11px;
+  line-height: 0px;
+  font-weight: 500;
+  margin: 0 32px;
+}
+
+.app-sources {
+  font-size: 11px;
+}
+
+.app-credits {
+  font-size: 14px;
+  line-height: 0px;
+  font-weight: 600;
+  margin: 0 32px;
+}
+
+/*SEZIONE MAPPA*/
+#chart1, #chart2, #chart3 {
+  border-radius: 5px; /*bordo del rettangolo della mappa*/
+  padding: 0% 1% 0% 1%;
+  background: #FFF;  /*dark mode variable*/
+  border: 0px solid #DDD;   /*bordo della mappa*/
+  box-shadow: 0 0px 0px 0px rgba(0,0,0, 0.1);
+  width: 100%;
+  margin: auto;
+}
+/*
+#chart1 .apexcharts-tooltip { //per modificare ulteriormente la tooltip della mappa
+  background: #ff0000;
+  color: orange;
+} */
+
+
+/*SEZIONE TOOLTIP SOURCES*/
+.tooltip-sources {
+  --balloon-font-size: 10px;
+  --balloon-font-style: normal;
+  --balloon-color: #1F1C2E;
+  --balloon-text-color: var(--app-container);
+}
+
+
+
+

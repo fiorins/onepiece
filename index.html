@@ -1,8 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ONE PIECE charts</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <!-- link alle icone-->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+  <link rel="icon" type="image/png" href="img/favicon.ico"/> 
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.png">
+
+  <!-- <script> import ApexCharts from 'apexcharts'; </script> -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <!-- <link rel="stylesheet" href="your/assets/balloon.min.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/balloon-css/balloon.min.css">
+
+</head>
 <body>
 
-<h1>First commit on this project</h1>
+<div class="app-container">
+  
+  <div class="app-header">
+
+    <div class="app-header-left">
+      <p class="app-name">fiorins.github.io/onepiece</p>
+      <div class="app-buttons">
+        <a id="github" target="_blank" href="https://www.fiorins.github.io/onepiece" class="bottone">
+          <img id="github_img" src="img/GitHub-Mark-64px.png" height="84%" width="84%"></img>
+        </a>
+        <a id="kofi" target="_blank" href="https://ko-fi.com/davidefiorini" class="bottone">
+          <img id="kofi_img" src="img/Ko-fi_Icon.png" height="84%" width="84%"></img>
+        </a>
+      </div>
+    </div>
+
+    <div class="app-header-right">
+      <button class="mode-switch" title="Switch Theme">
+        <img id="smile" src="img/ace_smiles.png" height="28px" width="28px"></img>
+        <p id="modalita">&nbsp;&nbsp;Dark Mode</p>
+      </button>
+    </div>
+    
+  </div>
+
+  <div class="maps-content">
+    <div class="first section">
+      <div id="chart1"></div>
+    </div>
+    <div class="second section">
+      <div id="chart2"></div>
+    </div>
+    <div class="third section">
+      <div id="chart3"></div>
+    </div>
+  </div>
+
+  <div class="app-footer">
+    <div class="app-footer-left">
+      <div class="app-rights">
+        ONE PIECE ©1997 by Eiichiro Oda
+      </div>
+      <div class="app-sources">
+        <span class="tooltip-sources" data-balloon-length="large" data-balloon-pos="right" aria-label="∙onepiece.fandom.com/wiki/Chapters_and_Volumes &#10; ∙jump.fandom.com/wiki/Weekly_Shonen_Jump/Issues &#10; ∙comicvine.gamespot.com/weekly-shonen-jump">Sources</span>
+      </div>
+    </div>
+    <div class="app-footer-right"> 
+      <img id="gif-hide" src="img/luffy-right.gif" alt="luffygif" width="111px" height="44px">
+      <div class="app-credits" onmouseover="show()" onmouseout="hide()">
+        Made with &#x2665 by Davide Fiorini
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="charts/heatmap.js"></script>
+<script src="charts/columnsmap.js"></script>
+<script src="charts/treemap.js"></script>
+<script src="script/mode_checker.js"></script>
+<script type = "text/javascript">
+  function show() {
+    var gif = document.querySelector('#gif-hide');
+    gif.style.visibility = 'visible';
+  }
+  function hide() {
+    var gif = document.querySelector('#gif-hide');
+    gif.style.visibility = 'hidden';
+  }
+</script>
 
 </body>
 </html>
