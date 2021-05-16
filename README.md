@@ -22,8 +22,8 @@ Updated to chapter 1014.
 Updated to chapter 1020.
 
 <br />
-
 For any advice on improving or implementing other data you can open a github issue!
+<br />
 *For the best experience I recommend using a large display*
 
 ☕️ If you like my works support me with a [coffee](https://ko-fi.com/davidefiorini)! ☕️ 
