@@ -24,7 +24,7 @@ html, body {
 
 body {
   font-family: "DM Sans", sans-serif;
-  overflow: auto; /*con hidden vieta lo scroll*/
+  
   background-color: var(--app-container);
 }
 
