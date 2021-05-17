@@ -26,6 +26,6 @@ Updated to chapter 1020.
 📢 For any advice on improving or implementing other data you can open a github issue! 📢
 <br />
 
-_For a better experience I recommend using a large display instead of a smartphone_ 
+_Due to the huge amount of data it is a very heavy site, it is recommended to browse it via desktop on a large display for a better experience_
 
 ☕️ If you like my works support me with a [coffee](https://ko-fi.com/davidefiorini)! ☕️ 
