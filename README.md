@@ -23,6 +23,9 @@ Updated to chapter 1020.
 
 <br />
 
+For the story arcs/sagas I have based myself on [OnePiece Fandom Wiki](https://onepiece.fandom.com/wiki/Story_Arcs) page.
+<br />
+
 📢 For any advice on improving or implementing other data you can open a github issue! 📢
 <br />
 
