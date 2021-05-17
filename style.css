@@ -37,6 +37,7 @@ button, a {
 .header {  /*se metto solo header invece di .header, flex non funziona, non so perché*/
   background-color: var(--app-container);
   width: 100%;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
