@@ -137,6 +137,10 @@ var options = {
   responsive: [ {
     breakpoint: 1000,
     options: {
+      chart: {
+        height: 750,
+        width: '100%', 
+      },
       legend: {
         show: true,
         position: 'bottom',
@@ -150,6 +154,7 @@ var options = {
       },
     }
   }],
+  
 
   chart: {
     //background: '#ff0000',
@@ -261,6 +266,15 @@ myChart3.render();
 
 function turnDarkMode3() {
   myChart3.updateOptions({
+    responsive: [ {
+      breakpoint: 1000,
+      options: {
+        chart: {
+          height: 750,
+          width: '100%', 
+        }, 
+      }, 
+    }],
     xaxis: {
       title: {
         style: {
@@ -296,6 +310,15 @@ function turnDarkMode3() {
 
 function turnLightMode3() {
   myChart3.updateOptions({
+    responsive: [ {
+      breakpoint: 1000,
+      options: {
+        chart: {
+          height: 750,
+          width: '100%', 
+        }, 
+      }, 
+    }],
     xaxis: {
       title: {
         style: {
