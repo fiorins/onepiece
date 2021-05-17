@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-  var modeSwitch = document.querySelector('.mode-switch'); //seleziona il tag CSS con quel nome
+  var modeSwitch = document.querySelector('#mode-switch'); //seleziona il tag CSS con quel nome
 
   modeSwitch.addEventListener('click', function () {
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var chart_bg1 = document.querySelector('#chart1');  //colore di sfondo della mappa
     var chart_bg2 = document.querySelector('#chart2');
     var chart_bg3 = document.querySelector('#chart3');
-    var buttons = document.getElementsByClassName('bottone');  //colore di sfondo della mappa
+    var buttons = document.getElementsByClassName('social-button');  //colore di sfondo della mappa
     //var kofi_image = document.getElementById('kofi');
     var github_image = document.getElementById('github_img');
     //var kofi_image_tag = document.getElementById('kofi_img');
