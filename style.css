@@ -25,68 +25,99 @@ html, body {
 body {
   font-family: "DM Sans", sans-serif;
   overflow: auto; /*con hidden vieta lo scroll*/
+  background-color: var(--app-container);
 }
 
 button, a {
   cursor: pointer;
 }
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--app-container);
-  transition: 0.2s;
-}
-
-.maps-content {
-  display: flex;
-  flex-direction: column;
-  padding: 0 5% 0 5%;
-}
-
-/* se voglio mettere in ordine piu mappe su una sezione */
-.second.section, .third.section {
-  padding: 2% 0 0 0;
-  display: flex;
-  flex-direction: row;
-}
 
 /*SEZIONI HEADER*/
-.app-header {
+.header {  /*se metto solo header invece di .header, flex non funziona, non so perché*/
+  background-color: var(--app-container);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+@media screen and (min-width: 500px) {  /*ambienti desktop*/
+  .header {
+    padding: 1% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  .header-left {
+    width: auto; /*per spostare i bottoni a destra toglierla*/
+    float: left;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 0 2%;
+  }
+  .header-right {
+    width: 100%; /*per spostare i bottoni a destra toglierla*/
+    float: right;
+    display: flex;
+    justify-content: space-between; /*per spostare i bottoni a destra usare space-evenly o around*/ 
+    align-items: center;
+    padding: 0 2%;
+  }
+}
+@media screen and (max-width: 500px) {   /*ambienti mobile*/
+  .header {
+    padding: 2% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .header span, button {
+    float: none;
+    display: block;
+  }
+  .header-left {
+    float: none;
+    text-align: center;
+    padding: 2%;
+  }
+  .header-right {
+    float: none;
+    display: flex;
+    justify-content: space-evenly; /*per spostare i bottoni a destra usare space-evenly o around*/ 
+    align-items: center;
+    padding: 2%;
+  }
+}
+
+#name {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color);
+}
+#mode-switch {  /*button della dark mode */
+  background-color: transparent;
+  border: none;
+  padding: 0;
   color: var(--main-color);
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  width: 100%;
-  padding: 0.8% 2%;
-  
-  /*position: sticky;
-  top: 0;
-  background: var(--app-container);*/
-}
-
-.app-header-left, .app-header-right{
-  display: flex;
-  align-items: center;
-}
-
-.app-name {
-  font-size: 20px;
-  /*line-height: 24px; */
+  font-size: 16px;
   font-weight: 700;
-  margin: 0 32px;
+  margin: 0;
 }
 
-.app-buttons {
-  width: 100%;
-  padding: 0px 0px 0px 0px;
-  background-color: transparent;
-  margin-top: 0px;
+.social {
   display: flex;
-  justify-content: left;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
 }
-
-.bottone {
+.social-button {
   text-decoration: none !important;
   width: 40px;
   height: 40px;
@@ -95,85 +126,109 @@ button, a {
   justify-content: center;
   border-radius: 50%;
   margin-right: 20px;
-  font-size: 20px;
   position: relative;
-  color: #1F1C2E;   /* colore icona */
-  border: 2px solid #1F1C2E;  /* colore bordo */
+  color: var(--main-color);   /* colore icona */
+  border: 2px solid var(--main-color);  /* colore bordo */
+  padding: 3px;
 }
-
-.bottone {  /* transizione iniziale del bordo del bottone */
+.social-button {  /* transizione iniziale del bordo del bottone */
   transition: all 0.3s linear 0.3s;
 }
-.bottone * {  /* transizione iniziale dell'icona del bottone */
+.social-button * {  /* transizione iniziale dell'icona del bottone */
   transition: all 0.3s linear 0s;
 }
-.bottone:hover {  /* transizione finale del bordo del bottone */
+.social-button:hover {  /* transizione finale del bordo del bottone */
   transition: all 0.3s linear 0s;
   border-color: rgba(255, 0, 0, 0) !important; /* l'ultimo valore gestisce la trasparenza del bordo del bottone */ /*senza important! ho notato che non funziona dopo che si passa alla dark mode*/
 }
-.bottone:hover * {  /* transizione finale dell'icona del bottone */
+.social-button:hover * {  /* transizione finale dell'icona del bottone */
   transition: all 0.3s linear 0.3s;
   transform: scale(1.15);
 }
 
-#gif-hide {
-  visibility: hidden;
-}
-
-.mode-switch {  /*button della dark mode */
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  color: var(--main-color);
+/*SEZIONI MAPPE*/
+.maps-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 16px;
-  /*line-height: 24px;*/
-  font-weight: 700;
-  margin: 0 32px;
+  flex-direction: column;
+  padding: 0 5% 0 5%;
+}
+/* se voglio mettere in ordine piu mappe su una sezione */
+.second.section, .third.section {
+  display: flex;
+  flex-direction: row;
+  padding: 2% 0 0 0;
 }
 
 
 /*SEZIONI FOOTER*/
-.app-footer {
+.footer {
   color: var(--main-color);
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
   width: 100%;
-  padding: 3% 2% 2% 2%;
-  position: relative; /*provare fixed anche*/
+  position: relative;
   bottom: 0;
-  height: 2em;
   left: 0;
-  
-  /*position: sticky;
-  top: 0;
-  background: var(--app-container); */
 }
-.app-footer-left, .app-footer-right {
-  display: flex;
-  align-items: center;
+.footer-left {
+  font-size: 11px;
+}
+@media screen and (min-width: 500px) {  /*ambienti desktop*/
+  .footer {
+    padding: 2% 2% 0.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .rights, .sources, .credits {
+    padding: 0 2%;
+  }
+}
+@media screen and (max-width: 500px) {   /*ambienti mobile*/
+  .footer {
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-left {
+    width: 100%;
+    float: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-right {
+    width: 100%;
+    float: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .rights, .sources, .credits {
+    padding: 4% 0;
+  }
 }
 
-.app-rights {
-  font-size: 11px;
-  line-height: 0px;
+
+.rights {
   font-weight: 500;
-  margin: 0 32px;
 }
-
-.app-sources {
-  font-size: 11px;
-}
-
-.app-credits {
+.credits {
   font-size: 14px;
-  line-height: 0px;
   font-weight: 600;
-  margin: 0 32px;
 }
+#gif-hide {
+  visibility: hidden;
+}
+
 
 /*SEZIONE MAPPA*/
 #chart1, #chart2, #chart3 {
@@ -186,17 +241,22 @@ button, a {
   margin: auto;
 }
 /*
-#chart1 .apexcharts-tooltip { //per modificare ulteriormente la tooltip della mappa
+#chart .apexcharts-tooltip { //per modificare ulteriormente la tooltip della mappa
   background: #ff0000;
   color: orange;
-} */
+} 
+#chart .apexcharts-toolbar { //per modificare posizione della toolbar
+  right: auto;
+  left: 0
+}
+*/
 
 
 /*SEZIONE TOOLTIP SOURCES*/
 .tooltip-sources {
   --balloon-font-size: 10px;
   --balloon-font-style: normal;
-  --balloon-color: #1F1C2E;
+  --balloon-color: var(--main-color);
   --balloon-text-color: var(--app-container);
 }
 

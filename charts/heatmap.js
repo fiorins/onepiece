@@ -547,6 +547,23 @@ var sj_issues = [
 var options = {
   series: sj_issues,
 
+  responsive: [ {
+    breakpoint: 1000,
+    options: {
+      legend: {
+        show: true,
+        position: 'bottom',
+        floating: false,
+        offsetX: 0,
+        offsetY: 6,
+        itemMargin: {
+          horizontal: 8,
+          vertical: 4,
+        },
+      },
+    }
+  }],
+
   chart: {
     //offsetX: 0, //shifta tutta mappa nel riquadro
     //offsetY: 0,

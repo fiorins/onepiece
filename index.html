@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+
   <meta charset="UTF-8">
   <title>ONE PIECE charts</title>
   <link rel="stylesheet" href="./style.css">
@@ -22,61 +26,64 @@
 </head>
 <body>
 
-<div class="app-container">
+  <div class="app-container">
   
-  <div class="app-header">
-
-    <div class="app-header-left">
-      <p class="app-name">fiorins.github.io/onepiece</p>
-      <div class="app-buttons">
-        <a id="github" target="_blank" href="https://www.fiorins.github.io/onepiece" class="bottone">
-          <img id="github_img" src="img/GitHub-Mark-64px.png" height="84%" width="84%"></img>
-        </a>
-        <a id="kofi" target="_blank" href="https://ko-fi.com/davidefiorini" class="bottone">
-          <img id="kofi_img" src="img/Ko-fi_Icon.png" height="84%" width="84%"></img>
-        </a>
-      </div>
-    </div>
-
-    <div class="app-header-right">
-      <button class="mode-switch" title="Switch Theme">
-        <img id="smile" src="img/ace_smiles.png" height="28px" width="28px"></img>
-        <p id="modalita">&nbsp;&nbsp;Dark Mode</p>
-      </button>
-    </div>
+    <header class="header">
     
+      <div class="header-left">
+        <span id="name" class="name menu">fiorins.github.io/onepiece</span>
+      </div>
+      <div class="header-right">
+        <div class="social">
+          <a id="github" class="social-button menu" target="_blank" href="https://github.com/fiorins/onepiece">
+            <img id="github_img" src="img/GitHub-Mark-64px.png" height="100%" width="100%"></img>
+          </a>
+          <a id="kofi" class="social-button menu" target="_blank" href="https://ko-fi.com/davidefiorini">
+            <img id="kofi_img" src="img/Ko-fi_Icon.png" height="100%" width="100%"></img>
+          </a>
+        </div>
+
+        <div class="mode">
+          <button id="mode-switch" title="Switch Theme">
+            <img id="smile" src="img/ace_smiles.png" height="28px" width="28px"></img>
+            <p id="modalita">&nbsp;&nbsp;Dark Mode</p>
+          </button>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="maps-content">
+      <section class="first section">
+        <div id="chart1"></div>
+      </section>
+      <section class="second section">
+        <div id="chart2"></div>
+      </section>
+      <section class="third section">
+        <div id="chart3"></div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <div class="rights">
+          ONE PIECE ©1997 by Eiichiro Oda
+        </div>
+        <div class="sources">
+          <span class="tooltip-sources" data-balloon-length="large" data-balloon-pos="right" aria-label="∙onepiece.fandom.com/wiki/Chapters_and_Volumes &#10; ∙jump.fandom.com/wiki/Weekly_Shonen_Jump/Issues &#10; ∙comicvine.gamespot.com/weekly-shonen-jump">Sources</span>
+        </div>
+      </div>
+      <div class="footer-right"> 
+        <img id="gif-hide" src="img/luffy-right.gif" alt="luffygif" width="111px" height="44px">
+        <div class="credits" onmouseover="show()" onmouseout="hide()">
+          Made with &#x2665 by Davide Fiorini
+        </div>
+      </div>
+    </footer>
+
   </div>
 
-  <div class="maps-content">
-    <div class="first section">
-      <div id="chart1"></div>
-    </div>
-    <div class="second section">
-      <div id="chart2"></div>
-    </div>
-    <div class="third section">
-      <div id="chart3"></div>
-    </div>
-  </div>
-
-  <div class="app-footer">
-    <div class="app-footer-left">
-      <div class="app-rights">
-        ONE PIECE ©1997 by Eiichiro Oda
-      </div>
-      <div class="app-sources">
-        <span class="tooltip-sources" data-balloon-length="large" data-balloon-pos="right" aria-label="∙onepiece.fandom.com/wiki/Chapters_and_Volumes &#10; ∙jump.fandom.com/wiki/Weekly_Shonen_Jump/Issues &#10; ∙comicvine.gamespot.com/weekly-shonen-jump">Sources</span>
-      </div>
-    </div>
-    <div class="app-footer-right"> 
-      <img id="gif-hide" src="img/luffy-right.gif" alt="luffygif" width="111px" height="44px">
-      <div class="app-credits" onmouseover="show()" onmouseout="hide()">
-        Made with &#x2665 by Davide Fiorini
-      </div>
-    </div>
-  </div>
-
-</div>
 
 <script src="charts/heatmap.js"></script>
 <script src="charts/columnsmap.js"></script>

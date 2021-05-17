@@ -134,6 +134,23 @@ var mydata = [
 var options = {
   series: mydata,
 
+  responsive: [ {
+    breakpoint: 1000,
+    options: {
+      legend: {
+        show: true,
+        position: 'bottom',
+        floating: false,
+        offsetX: 0,
+        offsetY: 12,
+        itemMargin: {
+          horizontal: 8,
+          vertical: 6,
+        },
+      },
+    }
+  }],
+
   chart: {
     //background: '#ff0000',
     height: 650,
@@ -170,7 +187,7 @@ var options = {
     margin: 20,
   },
 
-  legend: { ////
+  legend: {
     show: true,
     position: 'bottom',
     floating: false,
