@@ -224,6 +224,10 @@ function turnDarkMode2() {
     responsive: [ {
       breakpoint: 1000,
       options: {
+        chart: {
+          height: 700,
+          width: '100%', 
+        },
         xaxis: {
           axisTicks: {
             show: false,
@@ -301,6 +305,10 @@ function turnLightMode2() {
     responsive: [ {
       breakpoint: 1000,
       options: {
+        chart: {
+          height: 700,
+          width: '100%', 
+        },
         xaxis: {
           axisTicks: {
             show: false,
