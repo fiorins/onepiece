@@ -24,7 +24,7 @@ html, body {
 
 body {
   font-family: "DM Sans", sans-serif;
-  
+  /*overflow: auto; //con hidden vieta lo scroll, con overflow attivo sticky potrebbe non funzionare */
   background-color: var(--app-container);
 }
 
@@ -34,7 +34,7 @@ button, a {
 
 
 /*SEZIONI HEADER*/
-.header {  /*se metto solo header invece di .header, flex non funziona, non so perché*/
+.header {  /*solo header invece di .header, flex non funziona, non so perché*/
   background-color: var(--app-container);
   width: 100%;
   position: sticky;
@@ -65,6 +65,22 @@ button, a {
     justify-content: space-between; /*per spostare i bottoni a destra usare space-evenly o around*/ 
     align-items: center;
     padding: 0 2%;
+  }
+
+  /*effetti dei buttons solo su desktop*/
+  .social-button {  /* transizione iniziale del bordo del bottone */
+    transition: all 0.3s linear 0.3s;
+  }
+  .social-button * {  /* transizione iniziale dell'icona del bottone */
+    transition: all 0.3s linear 0s;
+  }
+  .social-button:hover {  /* transizione finale del bordo del bottone */
+    transition: all 0.3s linear 0s;
+    border-color: rgba(255, 0, 0, 0) !important; /* l'ultimo valore gestisce la trasparenza del bordo del bottone */ /*senza important! ho notato che non funziona dopo che si passa alla dark mode*/
+  }
+  .social-button:hover * {  /* transizione finale dell'icona del bottone */
+    transition: all 0.3s linear 0.3s;
+    transform: scale(1.15);
   }
 }
 @media screen and (max-width: 500px) {   /*ambienti mobile*/
@@ -131,20 +147,6 @@ button, a {
   color: var(--main-color);   /* colore icona */
   border: 2px solid var(--main-color);  /* colore bordo */
   padding: 3px;
-}
-.social-button {  /* transizione iniziale del bordo del bottone */
-  transition: all 0.3s linear 0.3s;
-}
-.social-button * {  /* transizione iniziale dell'icona del bottone */
-  transition: all 0.3s linear 0s;
-}
-.social-button:hover {  /* transizione finale del bordo del bottone */
-  transition: all 0.3s linear 0s;
-  border-color: rgba(255, 0, 0, 0) !important; /* l'ultimo valore gestisce la trasparenza del bordo del bottone */ /*senza important! ho notato che non funziona dopo che si passa alla dark mode*/
-}
-.social-button:hover * {  /* transizione finale dell'icona del bottone */
-  transition: all 0.3s linear 0.3s;
-  transform: scale(1.15);
 }
 
 /*SEZIONI MAPPE*/
