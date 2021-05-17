@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
         buttons[i].style.border = '2px solid #F3F6FD';
       }
 
-      github_image.src = 'img/GitHub-Mark-Light-64px.png';
+      github_image.src = 'img/GitHub_Icon-Light.png';
 
       tooltip_bg.style.setProperty('--balloon-color', '#F3F6FD');
       tooltip_bg.style.setProperty('--balloon-text-color', '#1F1C2E');
       
     } else {
-      iconaMode.src = 'img/ace_smiles.png';
+      iconaMode.src = 'img/ace_smiles_dark.png';
       nomeMode.innerHTML = '&nbsp;&nbsp;Dark Mode';
 
       chart_bg1.style.background = '#FFF';
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         buttons[i].style.border = '2px solid #1F1C2E';
       }
 
-      github_image.src = 'img/GitHub-Mark-64px.png';
+      github_image.src = 'img/GitHub_Icon-Dark.png';
 
       tooltip_bg.style.setProperty('--balloon-color', '#1F1C2E');
       tooltip_bg.style.setProperty('--balloon-text-color', '#F3F6FD');
