@@ -259,7 +259,7 @@ var options = {
 
 };
   
-//per ricalcolare % ho creato uno script su codepen, basta cambiare il numero dei capitoli dell'ultimo arco
+//per ricalcolare percetuale % usare script su codepen, basta cambiare il numero dei capitoli dell'ultimo arco
 
 var myChart3 = new ApexCharts(document.querySelector("#chart3"), options);
 myChart3.render();
