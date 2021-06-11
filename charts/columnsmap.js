@@ -1,18 +1,18 @@
 var mydata = [
   {
-  name: 'Chapters',
+  name: "Chapters",
   data: [21, 48, 48, 
     48, 48, 46, 45, 45, 45, 45, 44, 43, 42, 
     40, 42, 43, 39, 39, 39, 40, 39, 39, 38, 
     33, 15]
   }, {
-  name: 'Oda breaks',
+  name: "Oda's breaks",
   data: [0, 0, 0, 
     0, 1, 2, 3, 3, 4, 3, 4, 5, 6, 
     8, 5, 6, 9, 9, 9, 8, 9, 10, 10, 
     13, 5]
   }, {
-  name: 'Volumes',
+  name: "Volumes",
   data: [1, 5, 5, 
     5, 5, 5, 5, 4, 5, 4, 4, 4, 4, 
     4, 4, 4, 4, 4, 4, 3, 4, 4, 4, 
@@ -29,19 +29,19 @@ var mydata = [
 
 var mydatareverse = [
   {
-  name: 'Chapters',
+  name: "Chapters",
   data: [15, 33, 38, 
     39, 39, 40, 39, 39, 39, 43, 42, 40, 42, 
     43, 44, 45, 45, 45, 45, 46, 48, 48, 48, 
     48, 21] 
   }, {
-  name: 'Oda breaks',
+  name: "Oda's breaks",
   data: [5, 13, 10,
     10, 9, 8, 9, 9, 9, 6, 5, 8, 6,
     5, 4, 3, 4, 3, 3, 2, 1, 0, 0,
     0, 0]
   }, {
-  name: 'Volumes',
+  name: "Volumes",
   data: [2, 2, 4, 
     4, 4, 3, 4, 4, 4, 4, 4, 4, 4, 
     4, 4, 4, 5, 4, 5, 5, 5, 5, 5, 
