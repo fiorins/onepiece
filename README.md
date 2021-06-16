@@ -6,14 +6,14 @@ I made these charts to keep track of all the data produced by the work of One Pi
 
 > **Note:** All chapters released in their Shonen Jump number 
 
-Updated to chapter 1014.
+Updated to chapter 1017.
 
 
 #### 2.&nbsp; `Columns Map` 📊
 
 > **Note:** The annual numbers of chapters, volumes and breaks
 
-Updated to chapter 1014.
+Updated to chapter 1017.
 
 #### 3.&nbsp; `Tree Map` 📊
 
