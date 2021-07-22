@@ -245,7 +245,7 @@ var options = {
         formatter: function (val) {
           return val + ' of the story';
         },
-        title: 'Quota: ',
+        title: 'Share: ',
       },
   },
 
