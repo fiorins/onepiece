@@ -538,7 +538,8 @@ var sj_issues = [
       { x:'EO/b', y:null }, { x:21.22, y:1011 }, { x:'SJ/b', y:null },
       { x:23, y:1012 }, { x:24, y:1013 }, { x:'EO/b', y:null },
       { x:26, y:1014 }, { x:27, y:1015 }, { x:28, y:1016 }, 
-      { x:'EO/b', y:null }, { x:30, y:1017 }, 
+      { x:'EO/b', y:null }, { x:30, y:1017 }, { x:31, y:1018 },
+      { x:'EO/b', y:null }, { x:33.34, y:1019 },
     ]
   },
 ]
@@ -749,7 +750,7 @@ var options = {
           },
           {
             from: 802,
-            to: 1030,
+            to: 1035,
             name: 'Four Emperors',
             color: '#E50000',
           }
