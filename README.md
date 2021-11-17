@@ -1,21 +1,24 @@
 # ONE PIECE charts
 
+## 📊 Charts
+
+
 I made these charts to keep track of all the data produced by the work of One Piece manga ! Hope you like it!
 
-#### 1.&nbsp; `Heat Map` 📊
+#### 1.&nbsp; `Heat Map`
 
 > **Note:** All chapters released in their Shonen Jump number 
 
-Updated to chapter 1022.
+Updated to chapter 1032.
 
 
-#### 2.&nbsp; `Columns Map` 📊
+#### 2.&nbsp; `Columns Map`
 
 > **Note:** The annual numbers of chapters, volumes and breaks
 
-Updated to chapter 1022.
+Updated to chapter 1032.
 
-#### 3.&nbsp; `Tree Map` 📊
+#### 3.&nbsp; `Tree Map`
 
 > **Note:** The sizes of the various arcs in the Oda's masterpiece
 
@@ -31,4 +34,9 @@ For the story arcs/sagas I have based myself on [OnePiece Fandom Wiki](https://o
 
 _Due to the huge amount of data it is a very heavy site, it is recommended to browse it via desktop on a large display for a better experience_
 
-☕️ If you like my works support me with a [coffee](https://ko-fi.com/davidefiorini)! ☕️ 
+## ⚒️ Tools
+- **Development**: [VanillaJS](http://vanilla-js.com/)
+- **Deploy**: [GitHub Pages](https://pages.github.com/)
+
+## ☕️ Support
+If you like my works support me with a [coffee](https://ko-fi.com/davidefiorini)!
