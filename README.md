@@ -32,7 +32,7 @@ For the story arcs/sagas I have based myself on [OnePiece Fandom Wiki](https://o
 📢 For any advice on improving or implementing other data you can open a github issue! 📢
 <br />
 
-_Due to the huge amount of data it is a very heavy site, it is recommended to browse it via desktop on a large display for a better experience_
+_Due to the huge amount of data it is a pretty heavy site, it is recommended to browse it via desktop on a large display for a better experience_
 
 ## ⚒️ Tools
 - **Development**: [VanillaJS](http://vanilla-js.com/)
